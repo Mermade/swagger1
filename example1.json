@@ -1,0 +1,37 @@
+"note":{
+    "properties":{
+        "description":{
+            "type":"string"
+        },
+        "longValue":{
+            "type":"long"
+        },
+        "name":{
+            "type":"string"
+        },
+        "date":{
+            "type":"Date"
+        },
+        "photo":{
+            "type":"photo"
+        },
+        "booleanValue":{
+            "type":"boolean"
+        },
+        "intValue":{
+            "type":"int"
+        }
+    },
+    "id":"note"
+}
+"photo":{
+    "properties":{
+        "title":{
+            "type":"string"
+        },
+        "url":{
+            "type":"string"
+        }
+    },
+    "id":"photo"
+}

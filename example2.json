@@ -1,0 +1,89 @@
+// Sample resource listing
+{
+  "apis":[
+    {
+      "path":"/photo",
+      "description":""
+    }
+  ],
+  "basePath":"url",
+  "swagrVersion":"0.1a",
+  "apiVersion":"1.0.1a"
+}
+
+// Sample operation listing
+{
+  "apis":[
+    {
+      "path":"/photo/{userId}",
+      "description":"",
+      "operations":[
+        {
+          "parameters":[
+            {
+              "name":"userId",
+              "description":"ID of User whose photos",
+              "dataType":"string",
+              "allowMultiple":false,
+              "required":true,
+              "allowableValues":[
+                "allowedId1",
+                "allowedId2",
+                "allowedId3"
+              ],
+              "paramType":"path"
+            }
+          ],
+          "httpMethod":"GET",
+          "tags":[
+            "DM",
+            "PD"
+          ],
+          "nickname":"getPhotosById",
+          "responseClass":"List[photo]",
+          "deprecated":false,
+          "open":false,
+          "summary":"Fetches photos by UserId"
+        }
+      ],
+      "errorResponses":[
+        {
+          "reason":"Invalid ID supplied",
+          "code":400
+        },
+        {
+          "reason":"Not Authorized to access User",
+          "code":403
+        },
+        {
+          "reason":"User not found",
+          "code":404
+        }
+      ]
+    }
+  ],
+  "models":{
+    "photo":{
+      "properties":{
+        "title":{
+          "type":"string"
+        },
+        "url":{
+          "type":"string",
+          "description":"Url for photo",
+          "access":"restricted",
+          "notes":"Sample note for a url",
+          "enum":[
+            "a",
+            "b",
+            "c"
+          ]
+        }
+      },
+      "id":"photo"
+    }
+  },
+  "basePath":"url",
+  "swagrVersion":"0.1a",
+  "apiVersion":"1.0.1a"
+}
